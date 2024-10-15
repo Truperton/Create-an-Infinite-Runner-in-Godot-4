@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=4 uid="uid://brj4ebtbtvjls"]
+
+[ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_1yn70"]
+[ext_resource type="Texture2D" uid="uid://dbqgabkxwn7w4" path="res://Assets/Sprites/background.png" id="2_fiejm"]
+[ext_resource type="TileSet" uid="uid://xvi1ixt86yg8" path="res://Assets/Sprites/Terrain Tileset.tres" id="3_gdixm"]
+
+[node name="World" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_1yn70")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(512, 0)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(256, 128)
+scale = Vector2(1.74744, 1.6)
+texture = ExtResource("2_fiejm")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_mirroring = Vector2(1960, 0)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(0.525, 0.525)
+tile_map_data = PackedByteArray("AAAAAAYAAQAGAAgAAAABAAYAAQAGAAgAAAACAAYAAQAGAAgAAAADAAYAAQAGAAgAAAAEAAYAAQAGAAgAAAAFAAYAAQAGAAgAAAAGAAYAAQAGAAgAAAAHAAYAAQAGAAgAAAAIAAYAAQAGAAgAAAAJAAYAAQAGAAgAAAAKAAYAAQAGAAgAAAALAAYAAQAGAAgAAAAMAAYAAQAGAAgAAAANAAYAAQAGAAgAAAAOAAYAAQAGAAgAAAAPAAYAAQAGAAgAAAAQAAYAAQAGAAgAAAARAAYAAQAGAAgAAAASAAYAAQAGAAgAAAATAAYAAQAGAAgAAAAUAAYAAQAGAAgAAAAVAAYAAQAGAAgAAAAWAAYAAQAGAAgAAAAXAAYAAQAGAAgAAAAYAAYAAQAGAAgAAAAZAAYAAQAGAAgAAAAaAAYAAQAGAAgAAAAbAAYAAQAGAAgAAAA=")
+tile_set = ExtResource("3_gdixm")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(980, 0)
+autoscroll = Vector2(-100, 0)
+repeat_times = 3
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Parallax2D"]
+scale = Vector2(0.525, 0.525)
+tile_map_data = PackedByteArray("AAAAAAYAAQAGAAgAAAABAAYAAQAGAAgAAAACAAYAAQAGAAgAAAADAAYAAQAGAAgAAAAEAAYAAQAGAAgAAAAFAAYAAQAGAAgAAAAGAAYAAQAGAAgAAAAHAAYAAQAGAAgAAAAIAAYAAQAGAAgAAAAJAAYAAQAGAAgAAAAKAAYAAQAGAAgAAAALAAYAAQAGAAgAAAAMAAYAAQAGAAgAAAANAAYAAQAGAAgAAAA=")
+tile_set = ExtResource("3_gdixm")

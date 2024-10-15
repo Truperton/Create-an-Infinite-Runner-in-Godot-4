@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Create an Infinite Runner in Godot 4"
+config/tags=PackedStringArray("2d", "endless_runner", "platformer")
+run/main_scene="res://Scenes/World.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
-config/tags=PackedStringArray("2d", "endless_runner", "platformer")
 
 [display]
 
