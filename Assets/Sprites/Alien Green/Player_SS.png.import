@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kker42ko0sd7"
-path="res://.godot/imported/tilemap-backgrounds.png-c44e495c00e42a1b4ebfc67d8d4aa599.ctex"
+uid="uid://bnfiw1jigto0y"
+path="res://.godot/imported/Player_SS.png-15deb539710b2870a325e877dc06a1c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/tilemap-backgrounds.png"
-dest_files=["res://.godot/imported/tilemap-backgrounds.png-c44e495c00e42a1b4ebfc67d8d4aa599.ctex"]
+source_file="res://Assets/Sprites/Alien Green/Player_SS.png"
+dest_files=["res://.godot/imported/Player_SS.png-15deb539710b2870a325e877dc06a1c6.ctex"]
 
 [params]
 

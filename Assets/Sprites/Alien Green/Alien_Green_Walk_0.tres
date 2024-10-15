@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bx7evd6qkm8ld"]
+
+[ext_resource type="Texture2D" uid="uid://boyorxfji4jnq" path="res://Assets/Sprites/Alien Green/Alien_Green.png" id="1_v17v8"]
+
+[resource]
+atlas = ExtResource("1_v17v8")
+region = Rect2(69, 193, 68, 93)
