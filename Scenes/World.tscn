@@ -1,37 +1,25 @@
-[gd_scene load_steps=4 format=4 uid="uid://brj4ebtbtvjls"]
+[gd_scene load_steps=3 format=4 uid="uid://brj4ebtbtvjls"]
 
-[ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_1yn70"]
 [ext_resource type="Texture2D" uid="uid://dbqgabkxwn7w4" path="res://Assets/Sprites/background.png" id="2_fiejm"]
-[ext_resource type="TileSet" uid="uid://xvi1ixt86yg8" path="res://Assets/Sprites/Terrain Tileset.tres" id="3_gdixm"]
+[ext_resource type="TileSet" uid="uid://b18kedxksftay" path="res://Assets/Sprites/Terrain Tileset2.tres" id="2_lv4ek"]
 
 [node name="World" type="Node2D"]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-script = ExtResource("1_1yn70")
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(512, 0)
+[node name="Parallax2D_Background" type="Parallax2D" parent="Node2D"]
+repeat_size = Vector2(512, 0)
+autoscroll = Vector2(-50, 0)
 
-[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="Background" type="Sprite2D" parent="Node2D/Parallax2D_Background"]
 position = Vector2(256, 128)
 scale = Vector2(1.74744, 1.6)
 texture = ExtResource("2_fiejm")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
-motion_mirroring = Vector2(1960, 0)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="ParallaxBackground/ParallaxLayer2"]
-scale = Vector2(0.525, 0.525)
-tile_map_data = PackedByteArray("AAAAAAYAAQAGAAgAAAABAAYAAQAGAAgAAAACAAYAAQAGAAgAAAADAAYAAQAGAAgAAAAEAAYAAQAGAAgAAAAFAAYAAQAGAAgAAAAGAAYAAQAGAAgAAAAHAAYAAQAGAAgAAAAIAAYAAQAGAAgAAAAJAAYAAQAGAAgAAAAKAAYAAQAGAAgAAAALAAYAAQAGAAgAAAAMAAYAAQAGAAgAAAANAAYAAQAGAAgAAAAOAAYAAQAGAAgAAAAPAAYAAQAGAAgAAAAQAAYAAQAGAAgAAAARAAYAAQAGAAgAAAASAAYAAQAGAAgAAAATAAYAAQAGAAgAAAAUAAYAAQAGAAgAAAAVAAYAAQAGAAgAAAAWAAYAAQAGAAgAAAAXAAYAAQAGAAgAAAAYAAYAAQAGAAgAAAAZAAYAAQAGAAgAAAAaAAYAAQAGAAgAAAAbAAYAAQAGAAgAAAA=")
-tile_set = ExtResource("3_gdixm")
-
-[node name="Parallax2D" type="Parallax2D" parent="."]
-repeat_size = Vector2(980, 0)
+[node name="Parallax2D_Water" type="Parallax2D" parent="Node2D"]
+repeat_size = Vector2(522, 0)
 autoscroll = Vector2(-100, 0)
-repeat_times = 3
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="Parallax2D"]
-scale = Vector2(0.525, 0.525)
-tile_map_data = PackedByteArray("AAAAAAYAAQAGAAgAAAABAAYAAQAGAAgAAAACAAYAAQAGAAgAAAADAAYAAQAGAAgAAAAEAAYAAQAGAAgAAAAFAAYAAQAGAAgAAAAGAAYAAQAGAAgAAAAHAAYAAQAGAAgAAAAIAAYAAQAGAAgAAAAJAAYAAQAGAAgAAAAKAAYAAQAGAAgAAAALAAYAAQAGAAgAAAAMAAYAAQAGAAgAAAANAAYAAQAGAAgAAAA=")
-tile_set = ExtResource("3_gdixm")
+[node name="TileMapLayer_Water" type="TileMapLayer" parent="Node2D/Parallax2D_Water"]
+tile_map_data = PackedByteArray("AAAAAA0AAAANAAEAAAABAA0AAAANAAEAAAACAA0AAAANAAEAAAADAA0AAAANAAEAAAAEAA0AAAANAAEAAAAFAA0AAAANAAEAAAAGAA0AAAANAAEAAAAHAA0AAAANAAEAAAAIAA0AAAANAAEAAAAJAA0AAAANAAEAAAAKAA0AAAANAAEAAAALAA0AAAANAAEAAAAMAA0AAAANAAEAAAANAA0AAAANAAEAAAAOAA0AAAANAAEAAAAPAA0AAAANAAEAAAAQAA0AAAANAAEAAAARAA0AAAANAAEAAAASAA0AAAANAAEAAAATAA0AAAANAAEAAAAUAA0AAAANAAEAAAAVAA0AAAANAAEAAAAWAA0AAAANAAEAAAAXAA0AAAANAAEAAAAYAA0AAAANAAEAAAAZAA0AAAANAAEAAAAaAA0AAAANAAEAAAAbAA0AAAANAAEAAAAcAA0AAAANAAEAAAAAAA4AAAANAAMAAAABAA4AAAANAAMAAAACAA4AAAANAAMAAAADAA4AAAANAAMAAAAEAA4AAAANAAMAAAAFAA4AAAANAAMAAAAGAA4AAAANAAMAAAAHAA4AAAANAAMAAAAIAA4AAAANAAMAAAAJAA4AAAANAAMAAAAKAA4AAAANAAMAAAALAA4AAAANAAMAAAAMAA4AAAANAAMAAAANAA4AAAANAAMAAAAOAA4AAAANAAMAAAAPAA4AAAANAAMAAAAQAA4AAAANAAMAAAARAA4AAAANAAMAAAASAA4AAAANAAMAAAATAA4AAAANAAMAAAAUAA4AAAANAAMAAAAVAA4AAAANAAMAAAAWAA4AAAANAAMAAAAXAA4AAAANAAMAAAAYAA4AAAANAAMAAAAZAA4AAAANAAMAAAAaAA4AAAANAAMAAAAbAA4AAAANAAMAAAAcAA4AAAANAAMAAAA=")
+tile_set = ExtResource("2_lv4ek")
