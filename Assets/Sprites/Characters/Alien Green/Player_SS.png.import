@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duwlhm2ve53jw"
-path="res://.godot/imported/items_spritesheet.png-6ede3848fdae9e6e5968103b5e43596f.ctex"
+uid="uid://bnfiw1jigto0y"
+path="res://.godot/imported/Player_SS.png-23128f31d752ffa0dfd275db5e96617e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/items_spritesheet.png"
-dest_files=["res://.godot/imported/items_spritesheet.png-6ede3848fdae9e6e5968103b5e43596f.ctex"]
+source_file="res://Assets/Sprites/Characters/Alien Green/Player_SS.png"
+dest_files=["res://.godot/imported/Player_SS.png-23128f31d752ffa0dfd275db5e96617e.ctex"]
 
 [params]
 

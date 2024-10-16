@@ -1,19 +1,17 @@
 [gd_scene load_steps=10 format=4 uid="uid://brj4ebtbtvjls"]
 
 [ext_resource type="TileSet" uid="uid://b18kedxksftay" path="res://Assets/Sprites/Terrain_TS.tres" id="2_lv4ek"]
-[ext_resource type="Texture2D" uid="uid://bj8xihqsjwg21" path="res://Assets/Sprites/Clouds/Cloud_3.tres" id="2_rb8v7"]
+[ext_resource type="Texture2D" uid="uid://bj8xihqsjwg21" path="res://Assets/Sprites/Objects/Clouds/Cloud_3.tres" id="2_rb8v7"]
 [ext_resource type="Texture2D" uid="uid://4gkbla58dl1s" path="res://Assets/Sprites/bg.png" id="2_uquh1"]
-[ext_resource type="SpriteFrames" uid="uid://bfbjyt6sda3hm" path="res://Assets/Sprites/Alien Green/Players_SF.tres" id="3_eslnd"]
-[ext_resource type="Texture2D" uid="uid://6q2gfe50mvl6" path="res://Assets/Sprites/Clouds/Cloud_2.tres" id="3_vw03x"]
-[ext_resource type="Texture2D" uid="uid://btdbokeh1rv4y" path="res://Assets/Sprites/Clouds/Cloud_1.tres" id="4_nxbug"]
+[ext_resource type="SpriteFrames" uid="uid://bfbjyt6sda3hm" path="res://Assets/Sprites/Characters/Alien Green/Players_SF.tres" id="3_eslnd"]
+[ext_resource type="Texture2D" uid="uid://6q2gfe50mvl6" path="res://Assets/Sprites/Objects/Clouds/Cloud_2.tres" id="3_vw03x"]
+[ext_resource type="Texture2D" uid="uid://btdbokeh1rv4y" path="res://Assets/Sprites/Objects/Clouds/Cloud_1.tres" id="4_nxbug"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="6_igf7a"]
+[ext_resource type="Script" path="res://Scripts/tile_map_layer_platform.gd" id="8_n8fcy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2q67g"]
 radius = 24.0
 height = 90.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv1ap"]
-size = Vector2(256, 20)
 
 [node name="World" type="Node2D"]
 
@@ -64,6 +62,7 @@ tile_set = ExtResource("2_lv4ek")
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(128, 384)
 script = ExtResource("6_igf7a")
+jump_velocity = -600.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 2)
@@ -74,8 +73,7 @@ sprite_frames = ExtResource("3_eslnd")
 autoplay = "default"
 frame_progress = 0.832817
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(184, 504)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_rv1ap")
+[node name="TileMapLayer_Platform" type="TileMapLayer" parent="."]
+position = Vector2(88, 440)
+tile_set = ExtResource("2_lv4ek")
+script = ExtResource("8_n8fcy")
