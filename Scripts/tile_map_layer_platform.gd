@@ -4,7 +4,7 @@ extends TileMapLayer
 @export var platform_size : int = 2
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func set_platform() -> void:
 	for i in range(platform_size):
 		set_cell(Vector2i(i, 0), 0, Vector2(7,8), 0)
 

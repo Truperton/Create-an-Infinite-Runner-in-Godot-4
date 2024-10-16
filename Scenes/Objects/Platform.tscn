@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs1nayphqyxvb"]
+
+[ext_resource type="TileSet" uid="uid://b18kedxksftay" path="res://Assets/Sprites/Terrain_TS.tres" id="1_plv1l"]
+[ext_resource type="Script" path="res://Scripts/tile_map_layer_platform.gd" id="2_1n6ii"]
+
+[node name="TileMapLayer_Platform" type="TileMapLayer"]
+tile_set = ExtResource("1_plv1l")
+script = ExtResource("2_1n6ii")

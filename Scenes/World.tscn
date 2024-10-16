@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://6q2gfe50mvl6" path="res://Assets/Sprites/Objects/Clouds/Cloud_2.tres" id="3_vw03x"]
 [ext_resource type="Texture2D" uid="uid://btdbokeh1rv4y" path="res://Assets/Sprites/Objects/Clouds/Cloud_1.tres" id="4_nxbug"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="6_igf7a"]
-[ext_resource type="Script" path="res://Scripts/tile_map_layer_platform.gd" id="8_n8fcy"]
+[ext_resource type="Script" path="res://Scripts/platform_manager.gd" id="8_odsdm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2q67g"]
 radius = 24.0
@@ -73,7 +73,5 @@ sprite_frames = ExtResource("3_eslnd")
 autoplay = "default"
 frame_progress = 0.832817
 
-[node name="TileMapLayer_Platform" type="TileMapLayer" parent="."]
-position = Vector2(88, 440)
-tile_set = ExtResource("2_lv4ek")
-script = ExtResource("8_n8fcy")
+[node name="Platform Manager" type="Node" parent="."]
+script = ExtResource("8_odsdm")
