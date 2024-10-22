@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://brj4ebtbtvjls"]
+[gd_scene load_steps=12 format=4 uid="uid://brj4ebtbtvjls"]
 
 [ext_resource type="TileSet" uid="uid://b18kedxksftay" path="res://Assets/Sprites/Terrain_TS.tres" id="2_lv4ek"]
 [ext_resource type="Texture2D" uid="uid://bj8xihqsjwg21" path="res://Assets/Sprites/Objects/Clouds/Cloud_3.tres" id="2_rb8v7"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://btdbokeh1rv4y" path="res://Assets/Sprites/Objects/Clouds/Cloud_1.tres" id="4_nxbug"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="6_igf7a"]
 [ext_resource type="Script" path="res://Scripts/platform_manager.gd" id="8_odsdm"]
+[ext_resource type="LabelSettings" uid="uid://bhfa2wygfd2wc" path="res://Score_Label_Settings.tres" id="9_hxx17"]
+[ext_resource type="Script" path="res://Scripts/score_label.gd" id="10_ay613"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2q67g"]
 radius = 24.0
@@ -75,3 +77,14 @@ frame_progress = 0.832817
 
 [node name="Platform Manager" type="Node" parent="."]
 script = ExtResource("8_odsdm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Score Label" type="Label" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 128.0
+text = "Score:"
+label_settings = ExtResource("9_hxx17")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_ay613")
