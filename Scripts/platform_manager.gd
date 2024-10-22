@@ -16,6 +16,9 @@ func _ready() -> void:
 		add_child(platform_temp)
 
 func _physics_process(delta: float) -> void:
+	if get_node("../Player").position.x < -100:
+		get_node("../Game Over").game_over()
+		
 	#check for platforms off screen
 	for platform_current in platform_pool:
 		if platform_current.position.x < -300:
